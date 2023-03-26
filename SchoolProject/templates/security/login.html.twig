@@ -1,0 +1,51 @@
+{% extends 'base2.html.twig' %}
+{% block title %}login{% endblock %}
+
+{% block body %}
+
+<body class="login">
+<br>
+
+<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 col-lg-7">
+        <img src="{{ asset ('images/log.png') }}" alt="">
+    </div>
+    <div class="col-md-6 col-lg-5">
+        <div class="login-box bg-white box-shadow border-radius-10">
+            <div class="login-title">
+                <h2 class="text-center text-primary">Login To Start your session!</h2>
+            </div>
+            <br>
+            <form method="post">
+            {% if error %}
+                <div class="alert alert-danger">
+                    {{ error.messageKey|trans(error.messageData, 'security') }}
+                </div>
+            {% endif %}
+
+            {% if app.user %}
+                <div class="mb-3">
+                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            {% endif %}
+                   <input type="email"  name="email" id="inputEmail" class="form-control" placeholder="Login" required autofocus>
+                    <br>
+                   <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+                   <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                   <br>
+
+                   <div>
+                       <button class="btn btn-lg btn-primary" type="submit">
+                           Sign in
+                       </button>
+                   </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}

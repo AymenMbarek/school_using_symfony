@@ -1,0 +1,22 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+    <a href="{{ path('home') }}" class="navbar-brand">
+        <h1 class="m-0 text-primary"><img src=""></i>Future Generations</h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto">
+            <a href="{{ path('home') }}"  class="nav-item nav-link ">Home</a>
+            <a href ="{{ path('aboutus') }}" class="nav-item nav-link">About Us</a>
+            <a href="{{ path('classes') }}"  class="nav-item nav-link">Classes</a>
+            <a href="{{ path('contactus') }}"  class="nav-item nav-link">Contact</a>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="{{ path('app_login') }}" class="nav-item nav-link" >Connect</a>
+        </div>
+
+    </div>
+</nav>
+<!-- Navbar End -->

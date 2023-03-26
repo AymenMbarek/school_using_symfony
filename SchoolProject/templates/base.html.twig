@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Connect to Future Generation</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ asset ('css/bootstrap.min.css') }}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset ('css/font-awesome.min.css') }}" >
+    <!-- NProgress -->
+    <link rel="stylesheet" href="{{ asset ('css/nprogress.css') }}">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="{{ asset ('css/green.css') }}">
+
+    <!-- bootstrap-progressbar -->
+    <link rel="stylesheet" href="{{ asset ('css/bootstrap-progressbar-3.3.4.min.css') }}">
+
+    <!-- JQVMap -->
+    <link href="{{ asset ('css/jqvmap.min.css') }}" rel="stylesheet"/>
+
+    <!-- bootstrap-daterangepicker -->
+    <link href="{{ asset ('css/daterangepicker.css') }}" rel="stylesheet">
+
+    <!-- Calander -->
+    <link href="{{ asset ('css/fullcalendar.min.css') }}" rel="stylesheet">
+    <link href="{{ asset ('css/fullcalendar.print.css') }}" rel="stylesheet">
+
+    <!-- Datatables -->
+    <link href="{{ asset ('css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset ('css/buttons.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset ('css/fixedHeader.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset ('css/responsive.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset ('css/scroller.bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link rel="stylesheet" href="{{ asset ('css/custom.min.css') }}">
+
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+
+
+        <!-- Sidebar -->
+        {% include('menu.html.twig') %}
+        <!-- End Sidebar -->
+
+        <!-- Navbar -->
+        {% include('top.html.twig') %}
+        <!-- End navbar -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                    <section class="content">
+                        <div class="card-body">
+                            {% block body %}{% endblock %}
+                        </div>
+                    </section>
+            </div>
+        </div>
+            <!-- / end page content -->
+
+        <!-- footer content -->
+        <div class="top_nav">
+        <div class="nav_menu">
+            {% include('footer.html.twig') %}
+        </div>
+        </div>
+            <!-- / end footer content -->
+
+    </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="{{ asset ('js/jquery.min.js') }}"></script>
+<!-- Bootstrap -->
+<script src="{{ asset ('js/bootstrap.min.js') }}"></script>
+<!-- FastClick -->
+<script src="{{ asset ('js/fastclick.js') }}"></script>
+<!-- NProgress -->
+<script src="{{ asset ('js/nprogress.js') }}"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="{{ asset ('js/custom.min.js') }}"></script>
+
+<!-- calander -->
+<script src="{{ asset ('js/fullcalendar.min.js') }}"></script>
+
+<!-- moment -->
+<script src="{{ asset ('js/moment.min.js') }}"></script>
+
+<!-- Datatables -->
+<script src="{{ asset ('js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset ('js/dataTables.bootstrap.min.js') }}"></script>
+<script src="{{ asset ('js/dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset ('js/buttons.bootstrap.min.js') }}"></script>
+<script src="{{ asset ('js/buttons.flash.min.js') }}"></script>
+<script src="{{ asset ('js/buttons.html5.min.js') }}"></script>
+<script src="{{ asset ('js/buttons.print.min.js') }}"></script>
+<script src="{{ asset ('js/dataTables.fixedHeader.min.js') }}"></script>
+<script src="{{ asset ('js/dataTables.keyTable.min.js') }}"></script>
+<script src="{{ asset ('js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset ('js/responsive.bootstrap.js') }}"></script>
+<script src="{{ asset ('js/dataTables.scroller.min.js') }}"></script>
+<script src="{{ asset ('js/jszip.min.js') }}"></script>
+<script src="{{ asset ('js/pdfmake.min.js') }}"></script>
+<script src="{{ asset ('js/vfs_fonts.js') }}"></script>
+
+
+</body>
+</html>
+

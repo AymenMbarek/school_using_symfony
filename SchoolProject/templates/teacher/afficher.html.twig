@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Afficher Teacher {% endblock %}
+
+{%  block body %}
+<p>
+    <b>First Name: </b> {{ teacher.firstname }} <br>
+    <b>Last Name: </b> {{ teacher.lastname }} <br>
+    <b>Address: </b> {{ teacher.address }} <br>
+    <b>Phone: </b> {{ teacher.phone }}
+
+
+</p>
+
+
+{% endblock %}
